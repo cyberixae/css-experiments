@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Based Media Queries</title>
+    <style>
+body {
+  margin: 0;
+  padding: 40px 0;
+}
+.foo {
+  width: 100%;
+}
+.foo:after {
+  word-wrap: break-word;
+  content: '0';
+}
+
+@media only screen and (min-width :  2ch) { .foo:after { content: '00'; } }
+@media only screen and (min-width :  3ch) { .foo:after { content: '000'; } }
+@media only screen and (min-width :  4ch) { .foo:after { content: '0000'; } }
+@media only screen and (min-width :  5ch) { .foo:after { content: '00000'; } }
+@media only screen and (min-width :  6ch) { .foo:after { content: '000000'; } }
+@media only screen and (min-width :  7ch) { .foo:after { content: '0000000'; } }
+@media only screen and (min-width :  8ch) { .foo:after { content: '00000000'; } }
+@media only screen and (min-width :  9ch) { .foo:after { content: '000000000'; } }
+@media only screen and (min-width : 10ch) { .foo:after { content: '0000000000'; } }
+@media only screen and (min-width : 11ch) { .foo:after { content: '00000000000'; } }
+@media only screen and (min-width : 12ch) { .foo:after { content: '000000000000'; } }
+@media only screen and (min-width : 13ch) { .foo:after { content: '0000000000000'; } }
+@media only screen and (min-width : 14ch) { .foo:after { content: '00000000000000'; } }
+@media only screen and (min-width : 15ch) { .foo:after { content: '000000000000000'; } }
+@media only screen and (min-width : 16ch) { .foo:after { content: '0000000000000000'; } }
+@media only screen and (min-width : 17ch) { .foo:after { content: '00000000000000000'; } }
+@media only screen and (min-width : 18ch) { .foo:after { content: '000000000000000000'; } }
+@media only screen and (min-width : 19ch) { .foo:after { content: '0000000000000000000'; } }
+@media only screen and (min-width : 20ch) { .foo:after { content: '00000000000000000000'; } }
+@media only screen and (min-width : 21ch) { .foo:after { content: '000000000000000000000'; } }
+@media only screen and (min-width : 22ch) { .foo:after { content: '0000000000000000000000'; } }
+@media only screen and (min-width : 23ch) { .foo:after { content: '00000000000000000000000'; } }
+@media only screen and (min-width : 24ch) { .foo:after { content: '000000000000000000000000'; } }
+@media only screen and (min-width : 25ch) { .foo:after { content: '0000000000000000000000000'; } }
+@media only screen and (min-width : 26ch) { .foo:after { content: '00000000000000000000000000'; } }
+@media only screen and (min-width : 27ch) { .foo:after { content: '000000000000000000000000000'; } }
+@media only screen and (min-width : 28ch) { .foo:after { content: '0000000000000000000000000000'; } }
+@media only screen and (min-width : 29ch) { .foo:after { content: '00000000000000000000000000000'; } }
+@media only screen and (min-width : 30ch) { .foo:after { content: '000000000000000000000000000000'; } }
+@media only screen and (min-width : 31ch) { .foo:after { content: '0000000000000000000000000000000'; } }
+@media only screen and (min-width : 32ch) { .foo:after { content: '00000000000000000000000000000000'; } }
+@media only screen and (min-width : 33ch) { .foo:after { content: '000000000000000000000000000000000'; } }
+@media only screen and (min-width : 34ch) { .foo:after { content: '0000000000000000000000000000000000'; } }
+@media only screen and (min-width : 35ch) { .foo:after { content: '00000000000000000000000000000000000'; } }
+@media only screen and (min-width : 36ch) { .foo:after { content: '000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 37ch) { .foo:after { content: '0000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 38ch) { .foo:after { content: '00000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 39ch) { .foo:after { content: '000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 40ch) { .foo:after { content: '0000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 41ch) { .foo:after { content: '00000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 42ch) { .foo:after { content: '000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 43ch) { .foo:after { content: '0000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 44ch) { .foo:after { content: '00000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 45ch) { .foo:after { content: '000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 46ch) { .foo:after { content: '0000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 47ch) { .foo:after { content: '00000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 48ch) { .foo:after { content: '000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 49ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 50ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 51ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 52ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 53ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 54ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 55ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 56ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 57ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 58ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 59ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 60ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 61ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 62ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 63ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 64ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 65ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 66ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 67ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 68ch) { .foo:after { content: '00000000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 69ch) { .foo:after { content: '000000000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 70ch) { .foo:after { content: '0000000000000000000000000000000000000000000000000000000000000000000000'; } }
+@media only screen and (min-width : 71ch) { body { background: #aaa; } }
+    </style>
+  </head>
+  <body>
+    <div class="foo"><div>
+  </body>
+</html>
