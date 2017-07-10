@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Monospace Text Centering Experiment</title>
+    <style>
+body {
+  font-family: monospace;
+  margin: 0;
+}
+.background {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.foreground {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+    </style>
+    <script>
+const MAX_MAXCHARS = 100;
+
+function updateMaxChars() {
+  Array.prototype.forEach.call(document.getElementsByClassName('js-max-chars'), maxDiv => {
+    const ref = maxDiv.getElementsByClassName('js-max-chars_ref')[0];
+    const refTextWidth = ref.offsetWidth;
+    const refTextLength = ref.textContent.length;
+    const refWidth = refTextWidth / refTextLength;
+    const windowWidth = window.innerWidth;
+    const maxFit = Math.floor(windowWidth / refWidth);
+    const maxChars = Math.min(MAX_MAXCHARS, maxFit);
+    const everyOther = 2 * Math.floor(maxChars / 2);
+    const field = maxDiv.getElementsByClassName('js-max-chars_field')[0];
+    const maxWidth = everyOther * refWidth;
+    field.style.width = `${maxWidth}px`;
+  });
+}
+
+function init() {
+  updateMaxChars();
+  window.addEventListener('resize', updateMaxChars);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+    </script>
+  </head>
+  <body>
+    <div class="background">
+            <div>.HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH::HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH.</div>
+      <div class="js-max-chars">
+        <div class="js-max-chars_ref" style="position: absolute; height: auto; width: auto; white-space: nowrap; visibility: hidden;">0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</div>
+        <div class="js-max-chars_field">
+          <div class="foreground">
+            .HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH::HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH.
+          </div>
+        </div>
+      </div>
+            .HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH::HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH..HHHHHHHH.
+    <div>
+  </body>
+</html>
