@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hex grid test</title>
+    <style>
+.bytegrid {
+  font-family: monospace;
+  display: grid;
+  grid-template-columns: 13ch 14ch 5ch 5ch;
+}
+.bytegrid_item {
+  white-space: nowrap;
+}
+.bytegrid_item:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.bytegrid_item:nth-child(7) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.bytegrid_item:nth-child(2):before {
+  content: '|';
+}
+.bytegrid_item:nth-child(4):after {
+  content: '|';
+}
+.bytegrid_item:nth-child(6):before {
+  content: '|';
+}
+.bytegrid_item:nth-child(8):after {
+  content: '|';
+}
+
+@media only screen and (min-width: 500px) {
+  .bytegrid {
+    grid-template-columns: 12ch 13ch 12ch 14ch 5ch 4ch 4ch 5ch;
+  }
+  .bytegrid_item:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .bytegrid_item:nth-child(7) {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .bytegrid_item:nth-child(4):after {
+    content: '';
+  }
+  .bytegrid_item:nth-child(6):before {
+    content: '';
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="bytegrid">
+      <span class="bytegrid_item">30 31 32 33</span>
+      <span class="bytegrid_item">0123</span>
+      <span class="bytegrid_item">34 35 36 37</span>
+      <span class="bytegrid_item">4567</span>
+      <span class="bytegrid_item">38 39 3a 3b</span>
+      <span class="bytegrid_item">89:;</span>
+      <span class="bytegrid_item">3c 3d 3e 3f</span>
+      <span class="bytegrid_item">&lt;=&gt;?</span>
+    </div>
+  </body>
+</html>
